@@ -2,7 +2,6 @@ require("user.option")
 require("user.keymap")
 require("user.plugins")
 require("user.lsp")
-
 -- config plugins
 require("user.config.colorscheme")
 require("user.config.nvim-tree")
