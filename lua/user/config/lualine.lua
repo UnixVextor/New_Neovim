@@ -38,18 +38,22 @@ local mode_color = {
   t = "#D7BA7D",
 }
 
-local mode = {
-  -- mode component
-  function()
-    return "▊"
-  end,
-  color = function()
-    -- auto change color according to neovims mode
-    return { fg = mode_color[vim.fn.mode()] }
-  end,
-  -- padding = { right = 1 },
-  padding = 0,
-}
+-- local mode = {
+--   -- mode component
+--    fmt = function(str)
+--     return "-- " .. str .. " --"
+--   end,
+--
+--   function()
+--     return "▊"
+--   end,
+--   color = function()
+--     -- auto change color according to neovims mode
+--     return { fg = mode_color[vim.fn.mode()] }
+--   end,
+--   -- padding = { right = 1 },
+--   padding = 0,
+-- }
 
 local hide_in_width = function()
   return vim.fn.winwidth(0) > 80
@@ -75,13 +79,13 @@ local diff = {
   separator = "%#SLSeparator#" .. "│ " .. "%*",
 }
 
--- local mode = {
---   "mode",
---   fmt = function(str)
---     return "-- " .. str .. " --"
---   end,
--- }
-
+local mode = {
+  "mode",
+  fmt = function(str)
+    return "-- " .. str .. " --"
+  end,
+}
+--
 local filetype = {
   "filetype",
   icons_enabled = true,
@@ -193,3 +197,4 @@ lualine.setup {
   tabline = {},
   extensions = {},
 }
+
