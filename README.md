@@ -1,3 +1,4 @@
 ### This is config of neovim
-~linux~
-add to the foder ~ .config/nvim ~
+`linux` require neovim version 5.00+
+
+add to the foder `.config/nvim`
